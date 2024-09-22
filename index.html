@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="tip-calculator">
+        <form action="post" class="calculator-input">
+          <div class="bill-box">
+            <label for="bill-box__label">Bill</label>
+            <div class="bill-box__wrapper">
+              <img
+                class="bill-box__dollar-icon"
+                src="images/icon-dollar.svg"
+                alt=""
+              />
+              <input class="bill-box__input" type="text" placeholder="0" />
+            </div>
+          </div>
+          <div class="tip-box">
+            <label class="tip-box__label">Select tip %</label>
+            <div class="tip-box__wrapper">
+              <span
+                class="percentage-box percentage-box-fixed"
+                data-percentage="5"
+                >5%</span
+              >
+              <span
+                class="percentage-box percentage-box-fixed"
+                data-percentage="10"
+                >10%</span
+              >
+              <span
+                class="percentage-box percentage-box-fixed"
+                data-percentage="15"
+                >15%</span
+              >
+              <span
+                class="percentage-box percentage-box-fixed"
+                data-percentage="25"
+                >25%</span
+              >
+              <span
+                class="percentage-box percentage-box-fixed"
+                data-percentage="50"
+                >50%</span
+              >
+              <input
+                type="text"
+                class="percentage-box percentage-box-custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="people-box">
+            <label class="people"
+              ><span>Number of people</span><span class="error-message"></span
+            ></label>
+            <div class="people-box__wrapper">
+              <img
+                class="people-box__people-icon"
+                src="images/icon-person.svg"
+              />
+              <input class="people-box__input" type="text" placeholder="0" />
+            </div>
+          </div>
+        </form>
+        <article class="calculator-display">
+          <div class="calculator-display__container">
+            <div>
+              <div class="tip-amount-box">
+                <div class="tip-amount-box__wrapper">
+                  <span class="tip-amount-box__title">Tip amount</span
+                  ><span class="tip-amount-box__subtitle">/ person </span>
+                </div>
+                <div class="tip-amount-box__result">
+                  $<span class="tip-amount-box__person-amount">0.00</span>
+                </div>
+              </div>
+              <div class="total-amount-box">
+                <div class="total-amount-box__wrapper">
+                  <span class="total-amount-box__title">Total</span>
+                  <span class="total-amount-box__subtitle">/ person</span>
+                </div>
+                <div class="total-amount-box__result">
+                  $<span class="total-amount-box__person-amount">0.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn reset-btn">Reset</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
